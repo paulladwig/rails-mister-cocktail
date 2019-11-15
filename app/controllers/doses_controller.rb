@@ -30,8 +30,6 @@ class DosesController < ApplicationController
   end
 end
 
-
-
 # <form  method="post">
 #   <div class="form-group">
 #     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
