@@ -19,6 +19,8 @@ ing_serialized["drinks"].each do |drink|
 end
 
 cocktail1 = Cocktail.new(name: "Mojito")
+url1 = "https://images.unsplash.com/photo-1509448613959-44d527dd5d86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80"
+cocktail1.remote_photo_url = url1
 cocktail1.save
 Dose.create!(description: "1 1/2 oz White rum", ingredient: Ingredient.find_by(name: "Lime juice"), cocktail: cocktail1)
 Dose.create!(description: "200ml of Water", ingredient: Ingredient.find_by(name: "Water"), cocktail: cocktail1)
@@ -26,6 +28,8 @@ Dose.create!(description: "Sugar syrup to your liking", ingredient: Ingredient.f
 Dose.create!(description: "A slice of lemon", ingredient: Ingredient.find_by(name: "Lemon"), cocktail: cocktail1)
 
 cocktail2 = Cocktail.new(name: "Calpirinia")
+url2 = "https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+cocktail2.remote_photo_url = url2
 cocktail2.save
 Dose.create!(description: "1 1/2 oz of Pisco", ingredient: Ingredient.find_by(name: "Pisco"), cocktail: cocktail2)
 Dose.create!(description: "100ml of cold Water", ingredient: Ingredient.find_by(name: "Water"), cocktail: cocktail2)
