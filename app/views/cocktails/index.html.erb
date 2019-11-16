@@ -1,16 +1,32 @@
-<h1>Cocktails</h1>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <h3>Mange the cocktails in your life</h3>
+      <%= simple_form_for @cocktail, html: {class: "form-all-design"} do |f| %>
+        <div class="name-input">
+          <%= f.input :name, :label => "Name:", placeholder: ' Calbirinia', wrapper: false,:error => false, :input_html => { :class => 'input-design' }, :label_html => { :class => "label-design" }%>
+        </div>
+        <%= f.input :photo, wrapper: false, :label => "Upload a Photo", :input_html => { :class => 'input-design inputfile' }, :label_html => { :class => "label-design uploader" } %>
+        <%= f.input :photo_cache, wrapper: false, as: :hidden %>
+        <%= f.submit "Submit Cocktail", wrapper: false, :class => "submit-button"%>
+      <% end %>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <div class="card">
-      <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
-      <%=link_to cocktail.name, cocktail_path(cocktail) %>
+
+
   </div>
-<% end %>
+</div>
 
-<h5>Add a Cocktail</h5>
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Add"%>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-<% end %>
+<div class="container-box">
+  <div class="grid-display">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to(cocktail_path(cocktail)) do %>
+        <div class="card-new" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+          <p><%=cocktail.name %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+

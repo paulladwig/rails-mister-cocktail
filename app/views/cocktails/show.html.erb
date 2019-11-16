@@ -6,7 +6,7 @@
   <div>
     <%=dose.description%>
     <%= link_to dose_path(dose), method: :delete do %>
-      <button class="btn btn-primary"><i class="fas fa-trash"></i></button>
+      <button class="button-small"><i class="fas fa-trash"></i></button>
     <% end %>
   </div>
   <%end%>
@@ -21,5 +21,10 @@
 </div>
 
 
-<%= link_to "Add Ingredients", new_dose_path(@cocktail) %>
-<%= link_to "Back", cocktails_path %>
+<%= link_to new_dose_path(@cocktail) do %>
+  <button class="button">ADD INGREDIENT</button>
+<% end %>
+
+<%= link_to cocktails_path do %>
+  <button class="button">BACK</button>
+<% end %>

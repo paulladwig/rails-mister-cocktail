@@ -1,3 +1,20 @@
-.card {
+.card-new {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
 
+  p {
+
+    color: white;
+    font-size: 30px;
+    font-family: helvetica;
+  }
+}
+
+a {
+  text-decoration: none;
 }

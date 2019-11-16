@@ -1,0 +1,115 @@
+.banner {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1570629557357-45c6767e0140?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 800px;
+  padding: 40px 0;
+
+
+  h1 {
+    color: $yellow;
+    margin: 0;
+    font-size: 50px;
+  }
+
+  h3 {
+    color: $green;
+    font-weight: 500;
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
+.input-design {
+  border-radius: 10px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.input-design::placeholder {
+  color: $yellow;
+  font-weight: 300;
+}
+
+.label-design {
+  border-radius: 10px;
+  color: $green;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.form-all-design {
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.name-input {
+  background-color: rgba(255, 255, 254, 1);
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: $green;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  font-size: 16px;
+
+  &:hover {
+    color: $green;
+    background-color: $yellow;
+  }
+}
+
+.cocktail_photo {
+  display: flex;
+  align-items: center;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.uploader {
+  background-color: $green;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+
+  &:hover {
+    color: $green;
+    background-color: $yellow;
+  }
+
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
